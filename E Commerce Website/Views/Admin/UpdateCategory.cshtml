@@ -1,0 +1,28 @@
+﻿@model Category
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add Category</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Category Name</label>
+                                <div class="col-sm-9">
+                                    <input type="hidden" value="@Model.category_id" name="category_id" class="form-control" id="inputEmail3">
+                                    <input type="text" value="@Model.category_name" placeholder="Category Name" name="category_name" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="card-footer center">
+                                <input type="submit" value="Update Category" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

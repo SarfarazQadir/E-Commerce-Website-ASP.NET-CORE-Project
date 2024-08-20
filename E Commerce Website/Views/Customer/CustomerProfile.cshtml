@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "CustomerProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Customer>
+
+<div class="container mt-5"> <br />
+    <h1 class="text-center mb-4 mt-5">Customer Profile</h1>
+    <div class="author-box-center">
+        <form asp-action="UpdateCustomerProfile" enctype="multipart/form-data" method="post">
+           <center> <img src="@("~/CustomerImages/"+Model[0].customer_image)" hieght="100px" width="100px"
+                     asp-append-version="true" class="rounded-circle author-box-picture" />
+            </center>
+           <center> <div class="author-box-name">
+                <a href="@Url.Action("CustomerProfile","customer")">@Model[0].customer_name</a>
+                </div>
+            </center>
+            <input type="hidden" class="form-control" name="customer_id" value="@Model[0].customer_id"><br />
+            <input type="hidden" class="form-control" name="customer_name" value="@Model[0].customer_name">
+            <input type="hidden" class="form-control" name="customer_phone" value="@Model[0].customer_phone">
+            <input type="hidden" class="form-control" name="customer_email" value="@Model[0].customer_email">
+            <input type="hidden" class="form-control" name="customer_password" value="@Model[0].customer_password">
+            <input type="hidden" class="form-control" name="customer_gender" value="@Model[0].customer_gender">
+            <input type="hidden" class="form-control" name="customer_country" value="@Model[0].customer_country">
+            <input type="hidden" class="form-control" name="customer_city" value="@Model[0].customer_city">
+            <input type="hidden" class="form-control" name="customer_address" value="@Model[0].customer_address">
+            <div class="row d-flex justify-content-center">
+           <div class="col-md-3">
+                   <input type="file" class="form-control " name="customer_image" value="@Model[0].customer_image">
+
+            
+         
+            <div class="clearfix"></div><br />
+            <input type="submit" class="btn btn-primary" value="Update Customer Image" />
+                </div>
+            </div>
+        </form> <br /><br />
+
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+            <form asp-action="UpdateCustomerProfile" method="post" class="p-4 border rounded" style="background-color: #f9f9f9;">
+                <input type="hidden" name="customer_id" value="@Model[0].customer_id" />
+                <input type="hidden" name="customer_image" value="@Model[0].customer_image" />
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_name" value="@Model[0].customer_name" class="form-control" placeholder="Enter Customer Name" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_phone" value="@Model[0].customer_phone" class="form-control" placeholder="Enter Customer Phone" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="email" name="customer_email" value="@Model[0].customer_email" class="form-control" placeholder="Enter Customer Email" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_password" value="@Model[0].customer_password" class="form-control" placeholder="Enter Customer Password" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_gender" value="@Model[0].customer_gender" class="form-control" placeholder="Enter Customer Gender" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_country" value="@Model[0].customer_country" class="form-control" placeholder="Enter Customer Country" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_city" value="@Model[0].customer_city" class="form-control" placeholder="Enter Customer City" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="text" name="customer_address" value="@Model[0].customer_address" class="form-control" placeholder="Enter Customer Address" />
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary btn-block" value="Update Profile" style="width: 100%; background-color: #007bff;" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

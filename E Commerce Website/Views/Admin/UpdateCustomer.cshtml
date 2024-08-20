@@ -1,0 +1,76 @@
+﻿@model Customer
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Customer Details</h4>
+                    </div>
+                    <div class="card-body">
+                         <form enctype="multipart/form-data" method="post">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Name</label>
+                            <div class="col-sm-9">
+                                <input type="hidden" name="customer_id" class="form-control" value="@Model.customer_id" id="inputEmail3">
+                                <input type="text" name="customer_name" class="form-control" value="@Model.customer_name" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Phone</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_phone" class="form-control" value="@Model.customer_phone" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_email" class="form-control" value="@Model.customer_email" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Password</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_password" class="form-control" value="@Model.customer_password" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Gender</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_gender" class="form-control" value="@Model.customer_gender" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Country</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_country" class="form-control" value="@Model.customer_country" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer City</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_city" class="form-control" value="@Model.customer_city" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="customer_address" value="@Model.customer_address" class="form-control" id="inputEmail3" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Customer Image</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="customer_image" value="@Model.customer_image" class="form-control" id="inputEmail3" >
+                            </div>
+                        </div>
+                    <div class="card-footer center">
+                        <input type="submit" value="Update Customer" class="btn btn-primary" />
+                    </div>
+                        </form>
+                    </div>
+                </div>
+           </div>
+</div>
+</div>
+</section>

@@ -1,0 +1,52 @@
+﻿@model Product
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Customer Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" method="post">
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Product Name</label>
+                                <div class="col-sm-9">
+                                    <input type="hidden" name="product_id" class="form-control" value="@Model.product_id" id="inputEmail3">
+                                    <input type="text" name="product_name" class="form-control" value="@Model.product_name" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Product Price</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="product_price" class="form-control" value="@Model.product_price" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Product  Image</label>
+                                <div class="col-sm-9">
+                                    <input type="file" name="product_image" class="form-control" value="@Model.product_image" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Product Description</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="product_description" class="form-control" value="@Model.product_description" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Category </label>
+                                <div class="col-sm-9">
+                                    @Html.Partial("CategoryDropdown", ViewData["category"])
+                                </div>
+                            </div>
+                            <div class="card-footer center">
+                                <input type="submit" value="Update Customer" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

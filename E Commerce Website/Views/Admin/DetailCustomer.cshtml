@@ -1,0 +1,100 @@
+﻿@model Customer
+<section class="section">
+    <div class="section-body">
+        <div class="row mt-sm-4">
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="card author-box">
+                    <div class="card-body">
+                        <div class="author-box-center">
+                            <img src="@("~/CustomerImages/"+Model.customer_image)" asp-append-version="true" class="rounded-circle author-box-picture" />
+                            <div class="clearfix"></div><br />
+                            <div class="author-box-name">
+                                <a href="">@Model.customer_name</a>
+                            </div>
+                            <div class="author-box-job">@Model.customer_city, @Model.customer_country</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header center">
+                        <h4 class="text-center">Customer Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="py-4">
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Customer Id :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_id
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Customer Name :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_name
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Customer Phone :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_phone
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Customer Email :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_email
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Customer Password :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_password
+                                </span>
+                            </p><p class="clearfix">
+                                <span class="float-left">
+                                    Customer Country :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_country
+                                </span>
+                            </p><p class="clearfix">
+                                <span class="float-left">
+                                    Customer City :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_city
+                                </span>
+                            </p><p class="clearfix">
+                                <span class="float-left">
+                                    Customer Address :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.customer_address
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+@* <section class="section">
+    <div class="section-body">
+        <div class="row mt-sm-4">
+            <div class="col-12">
+               
+            </div>
+        </div>
+    </div>
+</section> *@

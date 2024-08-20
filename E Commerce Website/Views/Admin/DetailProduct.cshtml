@@ -1,0 +1,79 @@
+﻿@model Product
+<section class="section">
+    <div class="section-body">
+        <div class="row mt-sm-4">
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="card author-box">
+                    <div class="card-body">
+                        <div class="author-box-center">
+                            <img src="@("~/ProductImages/"+Model.product_image)" asp-append-version="true" class="rounded-circle author-box-picture" />
+                            <div class="clearfix"></div><br />
+                            <div class="author-box-name">
+                                <a href="">@Model.product_name</a>
+                            </div>
+                            <div class="author-box-job"> @Model.Category.category_name</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header center">
+                        <h4 class="text-center">Product Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="py-4">
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Product Id :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.product_id
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Product Name :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.product_name
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Product Price :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.product_price
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Product Description :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.product_description
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
+                                    Category :
+                                </span>
+                                <span class="float-right text-muted">
+                                    @Model.Category.category_name
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* <section class="section">
+        <div class="section-body">
+        <div class="row mt-sm-4">
+        <div class="col-12">
+
+        </div>
+        </div>
+        </div>
+        </section> *@

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "FetchFeedback";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+@model List<Feedback>
+
+<section class="section">
+    <div class="section-body">
+        <div class="row mt-sm-4">
+            <div class="col-12 ">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>All Feedbacks </h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-md">
+                                <tr>
+                                    <th>Username</th>
+                                    <th>User Messge</th>
+                                    <th colspan="2">Action</th>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.user_name</td>
+                                        <td>@item.user_message</td>
+                                        <td>
+                                           <a href="@Url.Action("DeleteFeedback","admin",new{id=item.feedback_id})" class="dropdown-item has-icon text-danger">
+                                                        <i class="far fa-trash-alt"></i>
+                                                        Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
