@@ -13,4 +13,6 @@
 ![image](https://github.com/user-attachments/assets/11914bd1-dfd3-48de-8d60-ea6e9ce1ddbb)
 ![image](https://github.com/user-attachments/assets/861896d7-27f2-4df1-889b-9b9c13aa340d)
 
+<h1>Category Details</h1>
 
+![image](https://github.com/user-attachments/assets/6b9d7682-94a1-45b0-b8af-98b5d5d67c62)
