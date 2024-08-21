@@ -10,4 +10,6 @@
 <h1>Customer Details</h1>
 
 ![image](https://github.com/user-attachments/assets/fe05e30f-4a3f-4271-8ce6-82dd34426fb7)
+![image](https://github.com/user-attachments/assets/11914bd1-dfd3-48de-8d60-ea6e9ce1ddbb)
+
 
