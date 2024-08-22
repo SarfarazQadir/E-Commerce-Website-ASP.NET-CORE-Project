@@ -13,23 +13,41 @@ namespace E_Commerce_Website.Controllers
             _maniContext = maniContext;
             _env = env;
         }
-        public IActionResult Index(string? searchByName)
+        public IActionResult Index()
         {
-            if(searchByName != null)
+                List<Category> category = _maniContext.tbl_category.ToList();
+                ViewData["category"] = category;
+
+                List<Product> products = _maniContext.tbl_product.ToList();
+                ViewData["products"] = products;
+
+            ViewBag.checkSession = HttpContext.Session.GetString("customerSession");
+                return View();
+        }
+        [HttpGet]
+        public IActionResult Index(string SearchProduct)
+        {
+			List<Category> category = _maniContext.tbl_category.ToList();
+			ViewData["category"] = category;
+
+			List<Product> prod = new List<Product>();
+            if (string.IsNullOrEmpty(SearchProduct))
             {
-               
+				List<Product> products = _maniContext.tbl_product.ToList();
+				ViewData["products"] = products;
+				ViewBag.checkSession = HttpContext.Session.GetString("customerSession");
+			}
+			else
+			{
+				prod = _maniContext.tbl_product.FromSqlInterpolated($" SELECT * FROM tbl_product WHERE product_name ={SearchProduct}").ToList();
             }
-            List<Category> category = _maniContext.tbl_category.ToList();
-            ViewData["category"] = category;
-			List<Product> product = _maniContext.tbl_product.ToList();
-			ViewData["product"] = product;
-			ViewBag.checkSession = HttpContext.Session.GetString("customerSession");
-            return View();
-        }
-        public IActionResult CustomerLogin()
+            return View(prod);
+		}
+		public IActionResult CustomerLogin()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult CustomerLogin(string Customer_Email, string Customer_Password)
         {
@@ -53,11 +71,11 @@ namespace E_Commerce_Website.Controllers
         }
         [HttpPost]
         public IActionResult CustomerRegistration(Customer customer)
-        {
+        {   
             _maniContext.tbl_customer.Add(customer);
             _maniContext.SaveChanges();
-             return RedirectToAction("CustomerLogin");
-        }
+            return RedirectToAction("CustomerLogin");
+        }  
         public IActionResult CustomerLogout()
         {
             HttpContext.Session.Remove("customerSession");
@@ -79,6 +97,8 @@ namespace E_Commerce_Website.Controllers
                 return View(data);
             }
         }
+
+      
         [HttpPost]
         public IActionResult UpdateCustomerProfile(IFormFile customer_image, Customer customer)
         {
@@ -93,7 +113,15 @@ namespace E_Commerce_Website.Controllers
             _maniContext.SaveChanges();
             return RedirectToAction("CustomerProfile");
         }
-		public IActionResult ContactPage()
+
+        [HttpPost]
+        public IActionResult UpdateCustomer(Customer cust)
+        {
+            _maniContext.tbl_customer.Update(cust);
+            _maniContext.SaveChanges();
+            return RedirectToAction("CustomerProfile");
+        }
+        public IActionResult ContactPage()
 		{
             List<Category> category = _maniContext.tbl_category.ToList();
             ViewData["category"] = category;

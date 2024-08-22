@@ -4,6 +4,7 @@ using E_Commerce_Website.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Commerce_Website.Migrations
 {
     [DbContext(typeof(maniContext))]
-    partial class maniContextModelSnapshot : ModelSnapshot
+    [Migration("20240822030100_RealOrderMigration")]
+    partial class RealOrderMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,7 +133,8 @@ namespace E_Commerce_Website.Migrations
 
                     b.Property<string>("customer_password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("customer_phone")
                         .HasColumnType("nvarchar(max)");
@@ -190,7 +194,7 @@ namespace E_Commerce_Website.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("order_id"));
 
-                    b.Property<int>("cust_id")
+                    b.Property<int>("customer_id")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("order_date")
@@ -204,7 +208,7 @@ namespace E_Commerce_Website.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("prod_id")
+                    b.Property<int>("product_id")
                         .HasColumnType("int");
 
                     b.Property<int>("quantity")
@@ -214,6 +218,10 @@ namespace E_Commerce_Website.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("order_id");
+
+                    b.HasIndex("customer_id");
+
+                    b.HasIndex("product_id");
 
                     b.ToTable("tbl_order");
                 });
@@ -253,6 +261,25 @@ namespace E_Commerce_Website.Migrations
                 });
 
             modelBuilder.Entity("E_Commerce_Website.Models.Cart", b =>
+                {
+                    b.HasOne("E_Commerce_Website.Models.Customer", "customers")
+                        .WithMany()
+                        .HasForeignKey("customer_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("E_Commerce_Website.Models.Product", "products")
+                        .WithMany()
+                        .HasForeignKey("product_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("customers");
+
+                    b.Navigation("products");
+                });
+
+            modelBuilder.Entity("E_Commerce_Website.Models.Order", b =>
                 {
                     b.HasOne("E_Commerce_Website.Models.Customer", "customers")
                         .WithMany()

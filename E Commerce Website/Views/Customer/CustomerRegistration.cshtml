@@ -1,9 +1,13 @@
-﻿@{
+﻿@model Customer
+
+@{
     ViewData["Title"] = "CustomerLogin";
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,28 +128,38 @@
                 .bottom-link a:hover {
                     text-decoration: underline;
                 }
+
+        /* Error message styling */
+        .text-danger {
+            color: red;
+            font-size: 0.875rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="form-box signup">
         <div class="form-details">
-            <h2 class="text-center" >Create Account</h2>
+            <h2 class="text-center">Create Account</h2>
             <p>To become a part of our community, please sign up using your personal information.</p>
         </div>
         <div class="form-content">
             <h2>SIGNUP</h2>
             <form method="post" novalidate>
                 <div class="input-field position-relative">
-                    <input type="text" required name="customer_name" placeholder=" ">
+                    <input type="text" required name="customer_name" placeholder=" " asp-for="customer_name">
                     <label for="customer_name">Enter your Name</label>
+                    <span class="text-danger" asp-validation-for="customer_name"></span>
                 </div>
                 <div class="input-field position-relative">
-                    <input type="email" required name="customer_email" placeholder=" ">
+                    <input type="email" required name="customer_email" placeholder=" " asp-for="customer_email">
                     <label for="customer_email">Enter your email</label>
+                    <span class="text-danger" asp-validation-for="customer_email"></span>
                 </div>
                 <div class="input-field position-relative">
-                    <input type="password" required name="customer_password" placeholder=" ">
+                    <input type="password" required name="customer_password" placeholder=" " asp-for="customer_password">
                     <label for="customer_password">Create password</label>
+                    <span class="text-danger" asp-validation-for="customer_password"></span>
                 </div>
                 <div class="policy-text">
                     <input type="checkbox" id="policy" required>
@@ -158,11 +172,12 @@
             </form>
             <div class="bottom-link">
                 Already have an account?
-                <a href="@Url.Action("CustomerLogin","customer")" id="login-link">Login</a>
+                <a href="@Url.Action("CustomerLogin", "customer")" id="login-link">Login</a>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -16,6 +16,7 @@ namespace E_Commerce_Website.Models
         public DbSet<Cart> tbl_cart { get; set; }
         public DbSet<Feedback> tbl_feedback { get; set; }
         public DbSet<Faqs> tbl_faqs { get; set; }
+        public DbSet<Order> tbl_order { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
