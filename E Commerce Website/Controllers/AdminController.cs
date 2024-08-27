@@ -212,12 +212,6 @@ namespace E_Commerce_Website.Controllers
             return View(_manicontext.tbl_product.Include(p => p.Category).FirstOrDefault
                 (p=>p.product_id == id));
         }
-
-        private IActionResult View<TProperty>(Func<Expression<Func<Product, TProperty>>, IIncludableQueryable<Product, TProperty>> include)
-        {
-            throw new NotImplementedException();
-        }
-
         public IActionResult AddProduct()
         {
 			var admin = HttpContext.Session.GetString("admin_session");

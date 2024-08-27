@@ -24,6 +24,7 @@ namespace E_Commerce_Website.Controllers
             ViewBag.checkSession = HttpContext.Session.GetString("customerSession");
                 return View();
         }
+        
         [HttpGet]
         public IActionResult Index(string SearchProduct)
         {
@@ -201,19 +202,19 @@ namespace E_Commerce_Website.Controllers
             _maniContext.SaveChanges();
             return RedirectToAction("ProductDetails");
         }
-        public IActionResult ViewCartCustomer()
-        {
-            string CustomerId = HttpContext.Session.GetString("customerSession");
-            if (CustomerId != null)
+            public IActionResult ViewCartCustomer()
             {
-            var cart = _maniContext.tbl_cart.Where(c => c.customer_id == int.Parse(CustomerId)).Include(c=>c.products).ToList();
-            return View(cart);
+                string CustomerId = HttpContext.Session.GetString("customerSession");
+                if (CustomerId != null)
+                {
+                var cart = _maniContext.tbl_cart.Where(c => c.customer_id == int.Parse(CustomerId)).Include(c=>c.products).ToList();
+                return View(cart);
+                }
+                else
+                {
+                    return RedirectToAction("UserLogin");
+                }
             }
-            else
-            {
-                return RedirectToAction("CustomerLogin");
-            }
-        }
         public IActionResult RemoveProduct(int id)
         {
          var cart = _maniContext.tbl_cart.Find(id);
