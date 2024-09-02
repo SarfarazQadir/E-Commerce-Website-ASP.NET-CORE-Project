@@ -20,3 +20,5 @@
 <h1>Add Category </h1>
 
 ![image](https://github.com/user-attachments/assets/fd177509-b3ef-4d7a-bbde-f83c38b8caf9)
+
+<h1>Product Details</h1>
