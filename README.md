@@ -22,3 +22,12 @@
 ![image](https://github.com/user-attachments/assets/fd177509-b3ef-4d7a-bbde-f83c38b8caf9)
 
 <h1>Product Details</h1>
+
+![image](https://github.com/user-attachments/assets/dedeb2a8-850f-40c0-8d98-039a60d93178)
+
+
+
+
+
+
+
