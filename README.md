@@ -31,4 +31,5 @@
 
 <h1>Individual Product Details</h1>
 
+![image](https://github.com/user-attachments/assets/88650868-536d-4c00-9220-dd2ad6aced9c)
 
