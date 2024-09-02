@@ -16,3 +16,7 @@
 <h1>Category Details</h1>
 
 ![image](https://github.com/user-attachments/assets/6b9d7682-94a1-45b0-b8af-98b5d5d67c62)
+
+<h1>Add Category </h1>
+
+![image](https://github.com/user-attachments/assets/fd177509-b3ef-4d7a-bbde-f83c38b8caf9)
