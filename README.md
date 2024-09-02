@@ -29,6 +29,6 @@
 
 ![image](https://github.com/user-attachments/assets/9926248b-171f-4c3d-af80-93eea0f1cbda)
 
-
+<h1>Individual Product Details</h1>
 
 
