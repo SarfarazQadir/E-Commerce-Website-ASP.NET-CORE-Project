@@ -36,3 +36,7 @@
 <h1>Cart Details</h1>
 
 ![image](https://github.com/user-attachments/assets/ea00f52e-dcaa-4dd6-8670-2bf3b38ab3b1)
+
+<h1>Edit Cart Status</h1>
+
+
