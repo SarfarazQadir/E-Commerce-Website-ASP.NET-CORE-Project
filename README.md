@@ -33,3 +33,6 @@
 
 ![image](https://github.com/user-attachments/assets/88650868-536d-4c00-9220-dd2ad6aced9c)
 
+<h1>Cart Details</h1>
+
+![image](https://github.com/user-attachments/assets/ea00f52e-dcaa-4dd6-8670-2bf3b38ab3b1)
