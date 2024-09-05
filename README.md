@@ -50,3 +50,6 @@
 ![image](https://github.com/user-attachments/assets/54f3bb22-724a-4dd5-971c-fc12b1901fe5)
 
 <h1>Products fetch from database</h1>
+
+![image](https://github.com/user-attachments/assets/97ae371a-aee8-49a7-9b4c-0bebe05215ce)
+
