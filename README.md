@@ -65,6 +65,8 @@
 
 ![image](https://github.com/user-attachments/assets/c3e7f7b4-c204-4342-9672-97f9507e788f)
 
+![image](https://github.com/user-attachments/assets/54ee2a3e-6e9d-4200-b085-56b1f497f2cc)
+
 <h1>User Cart</h1>
 
 ![image](https://github.com/user-attachments/assets/bb6978e5-f661-48eb-9152-e5cd37f54960)
