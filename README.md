@@ -58,3 +58,6 @@
 ![image](https://github.com/user-attachments/assets/a3376379-5785-4c76-8c7b-a865be88baf8)
 
 <h1>User Registration</h1>
+
+![image](https://github.com/user-attachments/assets/21b36fec-c087-42b9-8992-988e07cbd181)
+
