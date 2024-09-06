@@ -63,6 +63,7 @@
 
 <h1>User Profile</h1>
 
+![image](https://github.com/user-attachments/assets/c3e7f7b4-c204-4342-9672-97f9507e788f)
 
 <h1>User Cart</h1>
 
