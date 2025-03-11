@@ -8,8 +8,8 @@ namespace E_Commerce_Website.Controllers
 {
     public class AdminController : Controller
     {
-        private maniContext _manicontext ;
-        private IWebHostEnvironment _env ;
+            private maniContext _manicontext ;
+            private IWebHostEnvironment _env ;
         public AdminController(maniContext manicontext, IWebHostEnvironment env)
         {
             _manicontext = manicontext;
@@ -20,6 +20,9 @@ namespace E_Commerce_Website.Controllers
             var admin = HttpContext.Session.GetString("admin_session");
             if(admin != null)
             {
+                var customerCount = _manicontext.tbl_customer.Count();
+                TempData["customer"] = customerCount;
+
                 return View();
             }
             else
@@ -87,7 +90,7 @@ namespace E_Commerce_Website.Controllers
             _manicontext.tbl_admin.Update(admin);
             _manicontext.SaveChanges();
             return RedirectToAction("profile");
-        }
+        }   
         public IActionResult FetchCustomer()
         {
 			var admin = HttpContext.Session.GetString("admin_session");
@@ -240,7 +243,7 @@ namespace E_Commerce_Website.Controllers
             _manicontext.SaveChanges();
             return RedirectToAction("FetchProduct");
         }
-
+        // Update Product
         public IActionResult UpdateProduct(int id)
         {
             List<Category> categories = _manicontext.tbl_category.ToList();
