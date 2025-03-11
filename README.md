@@ -16,3 +16,58 @@
 <h1>Category Details</h1>
 
 ![image](https://github.com/user-attachments/assets/6b9d7682-94a1-45b0-b8af-98b5d5d67c62)
+
+<h1>Add Category </h1>
+
+![image](https://github.com/user-attachments/assets/fd177509-b3ef-4d7a-bbde-f83c38b8caf9)
+
+<h1>Product Details</h1>
+
+![image](https://github.com/user-attachments/assets/dedeb2a8-850f-40c0-8d98-039a60d93178)
+
+<h1>Add Product </h1>
+
+![image](https://github.com/user-attachments/assets/9926248b-171f-4c3d-af80-93eea0f1cbda)
+
+<h1>Individual Product Details</h1>
+
+![image](https://github.com/user-attachments/assets/88650868-536d-4c00-9220-dd2ad6aced9c)
+
+<h1>Cart Details</h1>
+
+![image](https://github.com/user-attachments/assets/ea00f52e-dcaa-4dd6-8670-2bf3b38ab3b1)
+
+<h1>Edit Cart Status</h1>
+
+![image](https://github.com/user-attachments/assets/4ba0a6fa-a5ee-4da1-92ea-b11c3dfe9b8c)
+
+<h1>All Feedbacks</h1>
+
+![image](https://github.com/user-attachments/assets/539f8248-5801-4169-aee0-e2406c06ea93)
+
+<h1>User Website </h1>
+
+![image](https://github.com/user-attachments/assets/54f3bb22-724a-4dd5-971c-fc12b1901fe5)
+
+<h1>Products fetch from database</h1>
+
+![image](https://github.com/user-attachments/assets/97ae371a-aee8-49a7-9b4c-0bebe05215ce)
+
+<h1>User Login</h1>
+
+![image](https://github.com/user-attachments/assets/a3376379-5785-4c76-8c7b-a865be88baf8)
+
+<h1>User Registration</h1>
+
+![image](https://github.com/user-attachments/assets/21b36fec-c087-42b9-8992-988e07cbd181)
+
+<h1>User Profile</h1>
+
+![image](https://github.com/user-attachments/assets/c3e7f7b4-c204-4342-9672-97f9507e788f)
+
+![image](https://github.com/user-attachments/assets/54ee2a3e-6e9d-4200-b085-56b1f497f2cc)
+
+<h1>User Cart</h1>
+
+![image](https://github.com/user-attachments/assets/bb6978e5-f661-48eb-9152-e5cd37f54960)
+
